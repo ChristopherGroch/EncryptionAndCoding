@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pl.view.ElgamalController">
+   <Button layoutX="461.0" layoutY="1.0" mnemonicParsing="false" onAction="#switchToMainWindow" prefHeight="26.0"
+           prefWidth="136.0" text="Main Window"/>
+   <TextField layoutX="30.0" layoutY="30.0" prefHeight="25.0" prefWidth="225.0" fx:id="x"/>
+   <TextField fx:id="g" layoutX="30.0" layoutY="90.0" prefHeight="25.0" prefWidth="225.0"/>
+   <Text layoutX="14.0" layoutY="20.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Keys"
+         wrappingWidth="52.134765625">
+      <font>
+         <Font name="System Bold" size="15.0"/>
+      </font>
+   </Text>
+   <TextField fx:id="y" layoutX="30.0" layoutY="60.0" prefHeight="25.0" prefWidth="225.0"/>
+   <Button fx:id="textChoice" disable="true" layoutX="200.0" layoutY="175.0" mnemonicParsing="false"
+           onAction="#textClick" prefHeight="25.0" prefWidth="70.0" text="TEXT">
+      <font>
+         <Font name="System Bold" size="12.0"/>
+      </font>
+   </Button>
+   <Button fx:id="fileChoice" layoutX="321.0" layoutY="175.0" mnemonicParsing="false" onAction="#fileClick"
+           prefHeight="25.0" prefWidth="70.0" text="FILE">
+      <font>
+         <Font name="System Bold" size="12.0"/>
+      </font>
+   </Button>
+   <Button layoutX="435.0" layoutY="57.0" mnemonicParsing="false" onAction="#readKeys" prefHeight="26.0"
+           prefWidth="137.0" text="Load keys from a file"/>
+   <Button layoutX="434.0" layoutY="108.0" mnemonicParsing="false" onAction="#saveKeys" prefHeight="26.0"
+           prefWidth="137.0" text="Save keys from a file"/>
+   <Text layoutX="200.0" layoutY="161.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0"
+         text="Encoding and decoding" textAlignment="CENTER" wrappingWidth="203.134765625">
+      <font>
+         <Font name="System Bold" size="15.0"/>
+      </font>
+   </Text>
+   <TextArea fx:id="plainText" layoutX="14.0" layoutY="213.0" prefHeight="175.0" prefWidth="250.0"
+             promptText="PLAIN TEXT"/>
+   <TextArea fx:id="cipherText" editable="false" layoutX="336.0" layoutY="213.0" prefHeight="175.0" prefWidth="250.0"
+             promptText="CIPHER"/>
+   <Button fx:id="encryptButton" layoutX="270.0" layoutY="253.0" mnemonicParsing="false" onAction="#encrypt"
+           prefHeight="26.0" prefWidth="60.0" text="Encode"/>
+   <Button fx:id="decryptButton" layoutX="270.0" layoutY="299.0" mnemonicParsing="false" onAction="#decrypt"
+           text="Decode"/>
+   <Button fx:id="fileReadBtn" layoutX="99.0" layoutY="240.0" mnemonicParsing="false" onAction="#fileRead"
+           text="Load a file"/>
+   <TextField fx:id="fileNameTextField" editable="false" layoutX="65.0" layoutY="289.0" promptText="file name">
+      <font>
+         <Font name="System Bold" size="12.0"/>
+      </font>
+   </TextField>
+   <Button fx:id="saveFileBtn" layoutX="373.0" layoutY="266.0" mnemonicParsing="false" onAction="#saveFile"
+           text="Save a file after operation"/>
+   <Text layoutX="14.0" layoutY="47.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="x"
+         wrappingWidth="20.134765625"/>
+   <Text layoutX="14.0" layoutY="77.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="y"
+         wrappingWidth="20.134765625"/>
+   <Text layoutX="14.0" layoutY="107.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="g"
+         wrappingWidth="20.134765625"/>
+   <TextField fx:id="p" layoutX="30.0" layoutY="120.0" prefHeight="25.0" prefWidth="225.0"/>
+   <Text layoutX="14.0" layoutY="137.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="p"
+         wrappingWidth="20.134765625"/>
+   <Button layoutX="290.0" layoutY="108.0" mnemonicParsing="false" onAction="#confirmKeys" prefHeight="26.0"
+           prefWidth="110.0" text="Confirm keys"/>
+   <Button layoutX="290.0" layoutY="57.0" mnemonicParsing="false" onAction="#generateKeys" prefHeight="26.0"
+           prefWidth="110.0" text="Generate keys"/>
+
+
+</AnchorPane>
